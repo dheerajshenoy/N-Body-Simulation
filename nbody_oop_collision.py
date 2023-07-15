@@ -53,7 +53,6 @@ class NBodySim:
 
         return a
 
-
     def simulate(self):
 
         np.random.seed(time.localtime().tm_sec)
