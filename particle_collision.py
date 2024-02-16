@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 from matplotlib import animation
 from itertools import combinations
+import random as rand
 
 class Particle:
     """A class representing a two-dimensional particle."""
@@ -18,11 +19,13 @@ class Particle:
         self.r = np.array((x, y))
         self.v = np.array((vx, vy))
         self.radius = radius
-
-        self.styles = styles
-        if not self.styles:
-            # Default circle styles
-            self.styles = {'edgecolor': 'b', 'fill': False}
+        colors = ['blue', 'limegreen', 'r', 'cyan', 'yellow', 'purple', 'pink']
+        # self.styles = styles
+        col = rand.choice(colors)
+        self.styles = {'edgecolor': col, 'fill': True, 'color' : col}
+        # if not self.styles:
+        #     # Default circle styles
+        #     self.styles = {'edgecolor': rand.choice(colors), 'fill': False}
 
     @property
     def x(self):

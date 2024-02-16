@@ -84,6 +84,7 @@ def getEnergy( pos, vel, mass, G ):
 fig = plt.figure()
 grid = plt.GridSpec(3, 1, wspace=0.0, hspace=0.3)
 ax1 = plt.subplot()
+ax1.set_aspect("equal")
 # ax2 = plt.subplot(grid[2,0])
 tEnd = 10
 
